@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Production - My Hobby</title>
+
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 1.3% 2.8%,
+          rgb(239, 249, 249) 0%,
+          rgb(182, 199, 226) 100.2%
+        );
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #4f7589;
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 10px 15px;
+        transition: all 120ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: #4f7589;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 15px 0px;
+        color: #ffffff;
+        font-size: 18px;
+      }
+
+      .theme-button {
+        font-size: 12px;
+        background-color: #000000e0;
+        color: #ffffff;
+        padding: 8px 10px;
+      }
+
+      .theme-button:hover {
+        color: #000000e0;
+        background-color: #ffffff;
+      }
+
+      .hero-image {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 1000ms ease-in-out;
+        background-color: #000000e0;
+      }
+
+      .hero-image:hover {
+        filter: contrast(150%);
+        transform: scale(1.1);
+      }
+
+      .image-grid {
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+
+      .image-grid img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .image-grid img:hover {
+        transform: scale(1.5);
+      }
+
+      .dark {
+        background: linear-gradient(
+          89.4deg,
+          rgb(74, 77, 103) -4.3%,
+          rgb(119, 125, 165) 102.1%
+        );
+        color: #ffffff;
+      }
+
+      .dark .container {
+        background-color: #050e12;
+      }
+
+      .dark a {
+        color: #7aabc5;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Video Production</h1>
+
+      <h2>My favourite thing to do</h2>
+      <a href="https://en.wikipedia.org/wiki/Video_production" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/351/original/andrew-neel-st-_pIZEvKM-unsplash.jpg?1722856954"
+          alt=""
+          class="hero-image"
+      /></a>
+      <div class="image-grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/333/original/gordon-cowie-4SYDbxHG0t8-unsplash.jpg?1722846511"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/337/original/siri-louis-VT3570ldxbQ-unsplash.jpg?1722846786"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/332/original/jakob-owens-l82NzBSYbj0-unsplash.jpg?1722846500"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/331/original/peter-stumpf-Q2-OEzSZY94-unsplash.jpg?1722846478"
+          alt=""
+        />
+      </div>
+      <p>
+        Video production is the process of producing video content for video. It
+        is the equivalent of filmmaking, but with video recorded either as
+        analog signals on videotape, digitally in video tape or as computer
+        files stored on optical discs, hard drives, SSDs, magnetic tape or
+        memory cards instead of film stock.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Video_production" target="_blank"
+        >Read more on Wikipedia</a
+      >
+    </div>
+    <footer>
+      Coded with 💜 by
+      <a
+        class="footer"
+        href="https://joziekhanyic155.myportfolio.com/"
+        target=":_blank"
+        >Khanyi Jozie</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
